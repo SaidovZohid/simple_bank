@@ -39,6 +39,9 @@ jobs:
       with:
         go-version: 1.19
 
+    - name: Install Migration
+      run: $ curl -L https://github.com/golang-migrate/migrate/releases/download/$version/migrate.darwin-amd64.tar.gz | tar xvz
+
     - name: Run Migration
       run: make migrate-up
 
